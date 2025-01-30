@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+        .body{
+
+             margin: 0;
+            background-color: white;
+           }
+
+         .hero {
+             margin-top: 5px;
+             padding: 50px;
+             text-align: center;
+             background-color: white;
+           }
+
+         .hero2 {
+             background-color: white;
+
+             padding: 50px 0;
+             text-align: center;
+
+         }
+         .features {
+             background-color: white;
+
+         }
+         .row{
+             padding-top: 5px;
+             display:flex;
+             gap:20px;
+             justify-content: center;
+
+
+         }
+
+
+         .features2 {
+             background-color: white;
+             display:flex;
+             margin-bottom: 10px;
+         }
+
+        .col-md-4{
+         width: 20%;
+         padding: 25px;
+         background-color: #79D7BE;
+         border-radius: 5px;
+         box-shadow: 5px 3px 3px #191a1b;
+        }
+        .col-md-5{
+         width: 20%;
+         padding: 25px;
+         font-weight: 100;
+         color: white;
+         margin:0;
+         margin-top: 15px;
+        }
+
+
+
+         .container{
+             max-width: fit-content;
+             padding: 0;
+         }
+
+
+         .navbar-brand{ color: #f8f9fa; }
+
+         .nav-link{color: #f8f9fa;}
+         .nav-item:hover{
+             border-bottom: 2px solid rgb(255, 255, 255);
+             color:#9B7EBD;
+         }
+
+         .navbar{
+             background-color:#3796e3;
+           }
+           .navbar>.container
+           {
+             justify-content: flex-end;
+           }
+
+         .herobar{
+             margin: 0;
+             margin-left: 50px;
+         }
+         .collapse{
+             margin-left: 800px;
+         }
+
+         .row3{
+             display:flex;
+             gap:20px;
+             justify-content: center;
+         }
+         footer {
+             display: flex;
+             gap:25%;
+             padding-top: 5px;
+             padding-left: 100px;
+             padding-right: 100px;
+             color: #6c757d;
+             text-align: center;
+         }
+         .foot1{
+             width: 35%;
+         }
+         .foot2{
+             width: 100%;
+             padding-top: 30px;
+             color: white;
+         }
+         .footerTitle{
+             color: white;
+         }
+
+
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container herobar ">
+        <a class="navbar-brand " href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-shield-shaded" viewBox=" 0 20 20">
+            <path fill-rule="evenodd" d="M8 14.933a1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+        </svg>Policy Trust</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item "><a class="nav-link" th:href="@{/home}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/about}">About</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/service}">Services</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/contact}">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/register}">Register</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/login}">Sign in</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="container">
+            <h1>Welcome to Policy Trust</h1>
+            <p class="lead">Our Policy Management Platform is designed to streamline access to organizational policies,and compliance resources.
+                Stay informed<br> compliant and empowered.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="features container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-person-hearts" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M11.5 1.246c.832-.855 2.913.642 0 2.566-2.913-1.924-.832-3.421 0-2.566M9 5a3 3 0 1 1-6 0 3 3 0 0 1 6 0m-9 8c0 1 1 1 1 1h10s1 0 1-1-1-4-6-4-6 3-6 4m13.5-8.09c1.387-1.425 4.855 1.07 0 4.277-4.854-3.207-1.387-5.702 0-4.276ZM15 2.165c.555-.57 1.942.428 0 1.711-1.942-1.283-.555-2.281 0-1.71Z"/>
+                </svg>
+                <h3>Employee Wellness</h3>
+                <p>Explore policies focused on <br>employee health, wellness<br>programs, and work-life balance.</p>
+                <button type="button" background="blue" class="btn btn-secondary">View Wellness Policies</button>
+            </div>
+            <div class="col-md-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                    <path d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+                    <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0"/>
+                </svg>
+                <h3>Data Protection</h3>
+                <p>Learn about policies ensuring data<br>privacy and protection of sensitie <br>information.</p>
+                <button type="button" background="blue" class="btn btn-secondary">View Data Protection Policies</button>
+
+            </div>
+            <div class="col-md-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+                </svg>
+                <h3>Performance</h3>
+                <p>Understand the policies and procedures for evaluating and improving employee performance. </p>
+                <button type="button" background="blue" class="btn btn-secondary">View Performance Policies</button>
+            </div>
+            <div class="col-md-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-file-lock" viewBox="0 0 16 16">
+                    <path d="M8 5a1 1 0 0 1 1 1v1H7V6a1 1 0 0 1 1-1m2 2.076V6a2 2 0 1 0-4 0v1.076c-.54.166-1 .597-1 1.224v2.4c0 .816.781 1.3 1.5 1.3h3c.719 0 1.5-.484 1.5-1.3V8.3c0-.627-.46-1.058-1-1.224M6.105 8.125A.64.64 0 0 1 6.5 8h3a.64.64 0 0 1 .395.125c.085.068.105.133.105.175v2.4c0 .042-.02.107-.105.175A.64.64 0 0 1 9.5 11h-3a.64.64 0 0 1-.395-.125C6.02 10.807 6 10.742 6 10.7V8.3c0-.042.02-.107.105-.175"/>
+                    <path d="M4 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm0 1h8a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1"/>
+                </svg>
+                <h3>Safety and Security</h3>
+                <p>Review policies for workplace<br>safety, emergency protocols, and<br>risk management.</p>
+                <button type="button" background="blue" class="btn btn-secondary">View Safety Policies</button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Hero2 Section -->
+    <div class="hero2">
+        <h4>Why Choose Us.</h4>
+        <div class="container">
+            <h1>Simplify Your Policy<br>Management Journey</h1>
+            <p class="lead">Discover a seamless experience in managing policies with our innovative plotform. We priotize<br>your needs to provide trusted, and efficint solutions.
+            </p>
+
+        </div>
+    </div>
+
+    <!-- Features2 Section -->
+    <div class="features2 container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-check-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="m10.97 4.97-.02.022-3.473 4.425-2.093-2.094a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-1.071-1.05"/>
+                </svg>
+                <h3>Trusted By Thousand</h3>
+                <p>Our platform has earned the trust of countless organizations for its reliability and transparency.</p>
+                <button type="button" background="blue" class="btn btn-secondary">Learn More</button>
+            </div>
+            <div class="col-md-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-currency-rupee" viewBox="0 0 16 16">
+                    <path d="M4 3.06h2.726c1.22 0 2.12.575 2.325 1.724H4v1.051h5.051C8.855 7.001 8 7.558 6.788 7.558H4v1.317L8.437 14h2.11L6.095 8.884h.855c2.316-.018 3.465-1.476 3.688-3.049H12V4.784h-1.345c-.08-.778-.357-1.335-.793-1.732H12V2H4z"/>
+                </svg>
+                <h3>Money-Back</h3>
+                <p>Your satisfaction is our priority, offering you flexibility with our money-back guarantee.</p>
+                <button type="button" background="blue" class="btn btn-secondary">Learn More</button>
+
+            </div>
+            <div class="col-md-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-graph-up-arrow" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M0 0h1v15h15v1H0zm10 3.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-1 0V4.9l-3.613 4.417a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61L13.445 4H10.5a.5.5 0 0 1-.5-.5"/>
+                </svg>
+                <h3>Customizable Plans</h3>
+                <p>Tailor our service to match your unique organizational needs with flexible, scalable plans. </p>
+                <button type="button" background="blue" class="btn btn-secondary">Learn More</button>
+            </div>
+            <div class="col-md-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-shield-fill-plus" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 0c-.69 0-1.843.265-2.928.56-1.11.3-2.229.655-2.887.87a1.54 1.54 0 0 0-1.044 1.262c-.596 4.477.787 7.795 2.465 9.99a11.8 11.8 0 0 0 2.517 2.453c.386.273.744.482 1.048.625.28.132.581.24.829.24s.548-.108.829-.24a7 7 0 0 0 1.048-.625 11.8 11.8 0 0 0 2.517-2.453c1.678-2.195 3.061-5.513 2.465-9.99a1.54 1.54 0 0 0-1.044-1.263 63 63 0 0 0-2.887-.87C9.843.266 8.69 0 8 0m-.5 5a.5.5 0 0 1 1 0v1.5H10a.5.5 0 0 1 0 1H8.5V9a.5.5 0 0 1-1 0V7.5H6a.5.5 0 0 1 0-1h1.5z"/>
+                </svg>
+                <h3>Safety First</h3>
+                <p>We prioritize securty, ensuring that your data is kept safe and confidentiala at all times.</p>
+                <button type="button" background="blue" class="btn btn-secondary">Learn More</button>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+<footer class=" bg-dark">
+
+    <div class="foot1">
+        <h2 class="footerTitle">Policy Trust</h2>
+        <p>Your trusted partner, offering a wide range of policies to ensure comprehensive protection and security for every aspect of your future.</p>
+
+    </div>
+    <div class="foot1">
+        <h2 class="footerTitle">Policy Information</h2>
+        <p>Our Policies coverage Plans Claims Process Term and Conditions privacy Policy Refund Policy</p>
+
+    </div>
+    <div class="foot1">
+        <h2 class="footerTitle">Contact Us</h2>
+        <p>Email: info@policy.trust.com<br> Phone: (+012) 352455</p>
+    </div>
+
+</footer >
+<!-- Footer -->
+<footer class=" bg-dark"> <!-- Features2 Section -->
+    <p class="foot2">&copy; 2025 Your Company. All rights reserved.</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

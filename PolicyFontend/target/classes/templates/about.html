@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .step-icon {
+          width: 60px;
+          height: 60px;
+          background-color: #e7f0fd;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          margin: 0 auto 15px;
+        }
+        .arrow {
+          font-size: 24px;
+          color: #f3b2b2;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .navbar{
+                background-color:#3796e3;
+              }
+              .navbar>.container
+              {
+                justify-content: flex-end;
+              }
+              .navbar-brand{ color: #f8f9fa; }
+
+            .nav-link{color: #f8f9fa;}
+            .nav-item:hover{
+                border-bottom: 2px solid rgb(255, 255, 255);
+                color:#9B7EBD;
+            }
+
+
+            .collapse{
+                margin-left: 800px;
+            }
+            .container{
+                max-width: fit-content;
+                padding: 0;
+            }
+
+
+            footer {
+                display: flex;
+                gap:25%;
+                padding-top: 5px;
+                padding-left: 100px;
+                padding-right: 100px;
+                color: #6c757d;
+                text-align: center;
+            }
+            .foot1{
+                width: 35%;
+            }
+            .foot2{
+                width: 100%;
+                padding-top: 30px;
+                color: white;
+            }
+            .footerTitle{
+                color: white;
+            }
+
+
+        body {
+          font-family: Arial, sans-serif;
+        }
+
+
+    </style>
+</head>
+<body>
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container herobar ">
+        <a class="navbar-brand " href="#"><svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" fill="currentColor" class="bi bi-shield-shaded" viewBox=" 0 20 20">
+            <path fill-rule="evenodd" d="M8 14.933a1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56"/>
+        </svg>Policy Trust</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item "><a class="nav-link" th:href="@{/home}">Home</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/about}">About</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/service}">Services</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/contact}">Contact</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/register}">Register</a></li>
+                <li class="nav-item"><a class="nav-link" th:href="@{/login}">Sign in</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="container my-5">
+    <div class="row align-items-center">
+        <div class="col-md-6">
+            <div class="row text-center">
+                <div class="col-6 mb-3">
+                    <div class="bg-light p-3 rounded shadow">
+                        <h2 class="text-primary">129</h2>
+                        <p class="mb-0">Policies</p>
+                    </div>
+                </div>
+                <div class="col-6 mb-3">
+                    <div class="bg-light p-3 rounded shadow">
+                        <h2 class="text-primary">99</h2>
+                        <p class="mb-0">Awards Won</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="bg-light p-3 rounded shadow">
+                        <h2 class="text-primary">556</h2>
+                        <p class="mb-0">Skilled Agents</p>
+                    </div>
+                </div>
+                <div class="col-6">
+                    <div class="bg-light p-3 rounded shadow">
+                        <h2 class="text-primary">967</h2>
+                        <p class="mb-0">Team Members</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>About Us</h3>
+            <h2>Your Future, Secured with Us</h2>
+            <p class="text-muted">
+                We are dedicated to providing unparalleled insurance solutions. With years of expertise, we ensure your peace of mind by tailoring policies that fit your unique needs.
+            </p>
+            <ul class="list-unstyled">
+                <li><i class="bi bi-check-circle-fill text-primary"></i> Transparent and flexible plans for everyone</li>
+                <li><i class="bi bi-check-circle-fill text-primary"></i> 24/7 customer support to answer your needs</li>
+                <li><i class="bi bi-check-circle-fill text-primary"></i> Trusted by thousands of satisfied customers</li>
+            </ul>
+            <a href="#" class="btn btn-primary mt-3">Learn More</a>
+        </div>
+    </div>
+</section>
+<footer class=" bg-dark">
+
+    <div class="foot1">
+        <h2 class="footerTitle">Policy Trust</h2>
+        <p>Your trusted partner, offering a wide range of policies to ensure comprehensive protection and security for every aspect of your future.</p>
+
+    </div>
+    <div class="foot1">
+        <h2 class="footerTitle">Policy Information</h2>
+        <p>Our Policies coverage Plans Claims Process Term and Conditions privacy Policy Refund Policy</p>
+
+    </div>
+    <div class="foot1">
+        <h2 class="footerTitle">Contact Us</h2>
+        <p>Email: info@policy.trust.com<br> Phone: (+012) 352455</p>
+    </div>
+
+</footer >
+<!-- Footer -->
+<footer class=" bg-dark"> <!-- Features2 Section -->
+    <p class="foot2">&copy; 2025 Your Company. All rights reserved.</p>
+</footer>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
